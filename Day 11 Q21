@@ -1,0 +1,65 @@
+//Q21 Write a program to display the month name and number of days using switch-case for a given month number.
+#include <stdio.h>
+
+int main() {
+    int monthNumber;
+
+    // 1. Get Input from the user
+    printf("Enter the month number (1 to 12): ");
+    
+    // Check if the input is successfully read
+    if (scanf("%d", &monthNumber) != 1) {
+        printf("Error: Invalid input. Please enter an integer.\n");
+        return 1; // Exit with an error code
+    }
+
+    // 2. Use switch-case to determine the month info
+    printf("\nOutput: ");
+
+    switch (monthNumber) {
+        case 1:
+            printf("January, 31 days\n");
+            break;
+        case 2:
+            // Assuming a common year (non-leap year) as shown in the sample test case
+            printf("February, 28 days\n"); 
+            break;
+        case 3:
+            printf("March, 31 days\n");
+            break;
+        case 4:
+            printf("April, 30 days\n");
+            break;
+        case 5:
+            printf("May, 31 days\n");
+            break;
+        case 6:
+            printf("June, 30 days\n");
+            break;
+        case 7:
+            printf("July, 31 days\n");
+            break;
+        case 8:
+            printf("August, 31 days\n");
+            break;
+        case 9:
+            printf("September, 30 days\n");
+            break;
+        case 10:
+            printf("October, 31 days\n");
+            break;
+        case 11:
+            printf("November, 30 days\n");
+            break;
+        case 12:
+            printf("December, 31 days\n");
+            break;
+        
+        default:
+            // 3. Handle Invalid Input
+            printf("Invalid month number. Please enter a number between 1 and 12.\n");
+            break;
+    }
+
+    return 0; // End of the program
+}
